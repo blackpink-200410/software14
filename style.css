@@ -1,0 +1,171 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+}
+
+.input-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.word-list-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#start-quiz-button {
+    background-color: #27ae60;
+}
+#start-quiz-button:hover {
+    background-color: #229954;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li.remembered .word-text {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.word-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+/* クイズモーダルのスタイル */
+.hidden {
+    display: none !important;
+}
+
+#quiz-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#quiz-content {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#quiz-text {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+#close-quiz {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* クイズ中のアクションのスタイル */
+#quiz-actions {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#quiz-actions.hidden {
+    display: none;
+}
+
+#quiz-actions label {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#quiz-actions input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}

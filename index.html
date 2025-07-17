@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルな単語帳</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>シンプルな単語帳</h1>
+        <div class="input-form">
+            <input type="text" id="english-input" placeholder="英単語を入力">
+            <input type="text" id="japanese-input" placeholder="日本語訳を入力">
+            <button id="add-button">追加</button>
+        </div>
+        <div class="word-list-controls">
+            <div>
+                <label>フィルタ:</label>
+                <select id="filter-select">
+                    <option value="all">すべて</option>
+                    <option value="unremembered">覚えていない</option>
+                    <option value="remembered">覚えた</option>
+                </select>
+            </div>
+            <div>
+                <button id="shuffle-button">シャッフル</button>
+                <button id="start-quiz-button">単語を覚える</button>
+            </div>
+        </div>
+        <ul id="word-list">
+            </ul>
+    </div>
+
+    <div id="quiz-modal" class="hidden">
+        <div id="quiz-content">
+            <span id="close-quiz">&times;</span>
+            <p id="quiz-text"></p>
+            <div id="quiz-actions" class="hidden">
+                <label>
+                    <input type="checkbox" id="quiz-status-checkbox">
+                    覚えた
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
